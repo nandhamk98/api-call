@@ -2,37 +2,74 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movieList {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.movieComp {
+  margin: 20px;
+  border: 2px solid rgb(207, 206, 206);
+  /* height: 700px; */
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 700px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movieName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.moviePoster {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.movieSummary {
+  font-size: 12px;
+}
+
+.iconButton {
+  color: gold;
+}
+
+.movie-rating {
+  padding-top: 10px;
+}
+
+ul > li {
+  list-style-type: none;
+  text-align: left;
+}
+
+.trailer {
+  margin: 10px;
+}
+
+.movieDetail-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-info > p {
+  text-align: left;
+}
+
+.movie-action {
+  display: flex;
+}
+
+ul > li {
+  display: inline-block;
+  margin: 30px;
+  text-decoration: none;
+}
+
+.paper {
+  min-height: 100vh;
 }
