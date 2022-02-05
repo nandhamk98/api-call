@@ -15,7 +15,7 @@ function EditMovie() {
         // console.log("movies", mvs);
         setMovie(mvs);
       });
-  }, []);
+  }, [id]);
 
   return movie ? <EditMovieSubComp movie={movie} /> : "";
 }

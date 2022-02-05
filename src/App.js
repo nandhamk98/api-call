@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import { MovieDetail } from "./MovieDetailComponent";
 import Button from "@mui/material/Button";

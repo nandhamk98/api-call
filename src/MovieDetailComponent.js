@@ -14,7 +14,7 @@ function MovieDetail() {
         // console.log("movies", mvs);
         setMovie(mvs);
       });
-  }, []);
+  }, [id]);
 
   return movie ? <MovieDetailSubComp movie={movie} /> : "";
 }
