@@ -17,8 +17,6 @@ function EditMovie() {
       });
   }, []);
 
-  console.log(movie);
-
   return movie ? <EditMovieSubComp movie={movie} /> : "";
 }
 

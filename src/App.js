@@ -23,17 +23,6 @@ function App() {
     },
   });
 
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    fetch("https://6197ebee164fa60017c22ebd.mockapi.io/movies")
-      .then((data) => data.json())
-      .then((mvs) => {
-        console.log(mvs);
-        setMovies(mvs);
-      });
-  }, []);
-
   const history = useHistory();
   return (
     <ThemeProvider theme={darkTheme}>
@@ -94,7 +83,7 @@ function App() {
               <EditMovie />
             </Route>
             <Route path="/movies/:id" exact>
-              <MovieDetail movielist={movies} />
+              <MovieDetail />
             </Route>
             <Route path="/movies">
               <MovieList />

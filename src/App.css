@@ -8,6 +8,10 @@
   justify-content: space-evenly;
 }
 
+.inputField {
+  margin: 10px;
+}
+
 .movieComp {
   margin: 20px;
   border: 2px solid rgb(207, 206, 206);
