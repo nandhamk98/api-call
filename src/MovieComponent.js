@@ -17,6 +17,18 @@ export function MovieComponent(props) {
   const [show, setShow] = useState(true);
 
   let id = props.id;
+
+  // const getCall = () => {
+  //   fetch("https://6197ebee164fa60017c22ebd.mockapi.io/movies")
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       // console.log("inside");
+  //       props.setMovies(data);
+  //     });
+  // };
+
+  // useEffect(getCall, []);
+
   return (
     <div className="movieComp">
       <img className="moviePoster" src={props.poster} alt={props.name}></img>
@@ -62,10 +74,13 @@ export function MovieComponent(props) {
           </IconButton>
           <IconButton
             onClick={() => {
-              const newMovieList = props.movies.filter(
-                (movie, ind) => ind !== id
-              );
-              props.setMovies(newMovieList);
+              // const newMovieList = props.movies.filter(
+              //   (movie, ind) => ind !== id
+              // );
+              // props.setMovies(newMovieList);
+              // deleteMovie();
+              // history.push("/movies");
+              props.deleteMovie(id);
             }}
           >
             <DeleteIcon />

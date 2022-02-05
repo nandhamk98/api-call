@@ -1,9 +1,26 @@
 import "./App.css";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useHistory } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
-function MovieDetail(props) {
+function MovieDetail() {
   const { id } = useParams();
-  const movie = props.movielist[id];
+  const [movie, setMovie] = useState(null);
+  useEffect(() => {
+    fetch("https://6197ebee164fa60017c22ebd.mockapi.io/movies/" + id)
+      .then((data) => data.json())
+      .then((mvs) => {
+        // console.log("movies", mvs);
+        setMovie(mvs);
+      });
+  }, []);
+
+  return movie ? <MovieDetailSubComp movie={movie} /> : "";
+}
+
+function MovieDetailSubComp({ movie }) {
+  const history = useHistory();
   return (
     <div className="movie-detail">
       <div className="trailer">
@@ -23,6 +40,18 @@ function MovieDetail(props) {
           <h3>{movie.rating}</h3>
         </div>
         <p>{movie.summary}</p>
+      </div>
+      <div className="BackButton">
+        <Button
+          variant="outlined"
+          startIcon={<ArrowBackIosIcon />}
+          className="BackButton"
+          onClick={() => {
+            history.goBack();
+          }}
+        >
+          Back
+        </Button>
       </div>
     </div>
   );

@@ -24,8 +24,8 @@
 }
 
 .moviePoster {
-  height: 300px;
-  width: 200px;
+  height: 400px;
+  width: 300px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -47,10 +47,9 @@ ul > li {
   text-align: left;
 }
 
-.trailer {
-  margin: 10px;
+.movie-detail {
+  margin: 20px;
 }
-
 .movieDetail-info {
   display: flex;
   justify-content: space-between;
@@ -72,4 +71,9 @@ ul > li {
 
 .paper {
   min-height: 100vh;
+  border-radius: 0px;
+}
+.BackButton {
+  display: flex;
+  justify-content: flex-start;
 }
